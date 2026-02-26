@@ -16,7 +16,7 @@ Clinical data is often messy, irregular, and riddled with missing values. GARLIC
 3. **Cross-Dimensional Sequential Attention:** Fuses global patterns across time and signals for robust prediction.
 
 <p align="center">
-  <img src="assets/garlic_architecture.png" alt="GARLIC Architecture overview" width="850">
+  <img src="images/structure.pdf" alt="GARLIC Architecture overview" width="850">
   <br>
   <em>Figure: The GARLIC framework.</em>
 </p>
@@ -29,3 +29,55 @@ Install the required packages using pip:
 
 ```bash
 pip install -r requirements.txt
+```
+
+## 📊 Datasets & Preparation
+We evaluate GARLIC on three standard public ICU datasets. You will need to download the raw data and place them in the correct directories.
+
+### Download Links
+- PhysioNet Challenge 2012 (P12): Download [here](https://physionet.org/content/challenge-2012/1.0.0/)
+- PhysioNet Challenge 2019 (P19): Download [here](https://physionet.org/content/challenge-2019/1.0.0/)
+- MIMIC-III: Request access [here](https://physionet.org/content/mimiciii/1.4/) (Credentialed access required)
+
+Directory Structure
+Place the downloaded raw datasets into the following structure:
+
+```
+├── data/
+│   ├── rawdata/
+│   │   ├── P12/           # Place P12 raw files here
+│   │   ├── P19/           # Place P19 raw files here
+│   │   └── MIMICIII/      # Place MIMIC-III raw files here
+│   └── processed_data/    # Auto-generated during the first run
+├── run.sh
+├── interpretability_evaluation.sh
+└── ...
+```
+Note: Preprocessing will automatically trigger during the first run and save the cleaned data to ./data/processed_data/.
+
+## 🚀 Running the Model
+1. Training & Evaluation
+To run the full pipeline (data preprocessing, model initialization, training, and evaluation), execute the main shell script. This will output the AUROC and AUPRC metrics for the tasks.
+
+```bash
+bash run.sh
+```
+2. Interpretability Evaluation
+To reproduce the quantitative interpretability experiments (e.g., the perturbation-based masking using Top 50%, Bottom 50%, Random 50%), run:
+
+```bash
+bash interpretability_evaluation.sh
+```
+
+## 📖 Citation
+If you find this code or our paper useful for your research, please consider citing:
+
+```
+@inproceedings{wang2026garlic,
+  title={{GARLIC}: Graph Attention-Based Relational Learning of Multivariate Time Series in Intensive Care},
+  author={Wang, Ruirui and G{\"u}nther, Manuel and Li, Yanke and Paez-Granados, Diego},
+  booktitle={The Fourteenth International Conference on Learning Representations},
+  year={2026},
+  url={[https://openreview.net/forum?id=4ZAwmIaA9y](https://openreview.net/forum?id=4ZAwmIaA9y)}
+}
+```
