@@ -75,6 +75,10 @@ bash interpretability_evaluation.sh
 - Small numerical differences may occur across hardware and CUDA versions.
 - The first run may take longer due to preprocessing and caching under ```./data/processed_data/.```
 
+
+## 🙏 Acknowledgments
+This research project was partially supported by the Schweizer Paraplegiker Stiftung and the ETH Zürich Foundation (2021-HS-348) and the JST Moonshot R\&D Program, Grant Number JPMJMS2034-18.
+
 ## 📖 Citation
 If you find this code or our paper useful for your research, please consider citing:
 
