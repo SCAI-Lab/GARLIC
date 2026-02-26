@@ -16,9 +16,9 @@ Clinical data is often messy, irregular, and riddled with missing values. GARLIC
 3. **Cross-Dimensional Sequential Attention:** Fuses global patterns across time and signals for robust prediction.
 
 <p align="center">
-  <img src="images/structure.pdf" alt="GARLIC Architecture overview" width="850">
+  <img src="images/structure.png" alt="GARLIC Architecture overview" width="850">
   <br>
-  <em>Figure: The GARLIC framework.</em>
+  <em>Figure: The GARLIC Architecture.</em>
 </p>
 
 ## ⚙️ Requirements
