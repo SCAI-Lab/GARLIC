@@ -39,7 +39,7 @@ We evaluate GARLIC on three standard public ICU datasets. You will need to downl
 - PhysioNet Challenge 2019 (P19): Download [here](https://physionet.org/content/challenge-2019/1.0.0/)
 - MIMIC-III: Request access [here](https://physionet.org/content/mimiciii/1.4/) (Credentialed access required)
 
-Directory Structure
+### Directory Structure
 Place the downloaded raw datasets into the following structure:
 
 ```
@@ -69,14 +69,20 @@ To reproduce the quantitative interpretability experiments (e.g., the perturbati
 bash interpretability_evaluation.sh
 ```
 
+## 🧪 Reproducibility notes
+
+- Fix random seeds (if exposed via flags/configs) for comparable results.
+- Small numerical differences may occur across hardware and CUDA versions.
+- The first run may take longer due to preprocessing and caching under ```./data/processed_data/.```
+
 ## 📖 Citation
 If you find this code or our paper useful for your research, please consider citing:
 
 ```
 @inproceedings{wang2026garlic,
   title={{GARLIC}: Graph Attention-Based Relational Learning of Multivariate Time Series in Intensive Care},
-  author={Wang, Ruirui and G{\"u}nther, Manuel and Li, Yanke and Paez-Granados, Diego},
-  booktitle={The Fourteenth International Conference on Learning Representations},
+  author={Wang, Ruirui*, Li, Yanke*, G{\"u}nther, Manuel and Paez-Granados, Diego},
+  booktitle={The Fourteenth International Conference on Learning Representations (ICLR)},
   year={2026},
   url={[https://openreview.net/forum?id=4ZAwmIaA9y](https://openreview.net/forum?id=4ZAwmIaA9y)}
 }
