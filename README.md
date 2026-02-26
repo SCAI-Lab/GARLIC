@@ -85,7 +85,7 @@ If you find this code or our paper useful for your research, please consider cit
 ```
 @inproceedings{wang2026garlic,
   title={{GARLIC}: Graph Attention-Based Relational Learning of Multivariate Time Series in Intensive Care},
-  author={Wang, Ruirui*, Li, Yanke*, G{\"u}nther, Manuel and Paez-Granados, Diego},
+  author={Wang, Ruirui* and Li, Yanke* and G{\"u}nther, Manuel and Paez-Granados, Diego},
   booktitle={The Fourteenth International Conference on Learning Representations (ICLR)},
   year={2026},
   url={[https://openreview.net/forum?id=4ZAwmIaA9y](https://openreview.net/forum?id=4ZAwmIaA9y)}
